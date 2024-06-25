@@ -1,0 +1,33 @@
+body{
+    background-color: #1f2937;
+    color:white;
+    font-family: 'Satoshi';
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+       url('/assets/fonts/Satoshi-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+:root {
+    --color-primary-gray: #1f2937;
+    --color-secondary-gray: rgba(0, 0, 0, 0.1);
+    --color-primary-green: #34d399; 
+  }
+
+  .bg-dark-gray {
+    background-color: var(--color-primary-gray);
+  }
+
+  .bg-light-gray {
+    background-color: var(--color-secondary-gray);
+  }
+
+  .bg-primary-green {
+    background-color: var(--color-primary-green);
+  }
+
