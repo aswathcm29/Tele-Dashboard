@@ -9,40 +9,157 @@
     <script src="/script.js"></script>
 </head>
 <body class="bg-dark-gray">
-   <div class="flex h-[100vh]">
-        <div class="h-full bg-light-gray w-[7rem] rounded-r-xl">
-         
+    <div class="flex h-[100vh]">
+        <div class="h-full bg-light-gray w-[7rem] rounded-r-xl flex flex-col gap-y-[3rem]">
+              <div class="flex flex-col justify-center items-center mt-[5rem] gap-y-[0.5rem]">
+                 <img src="/assets/Dash.svg" alt="Dashboard" class="w-8 h-8">
+                 <span>Dashboard</span>
+              </div>
+              <div class="flex flex-col justify-center items-center gap-y-[0.5rem]">
+                <img src="/assets/Dial.svg" alt="Dashboard" class="w-8 h-8">
+                <span>Call Logs</span>
+             </div>
         </div>
         <div class="flex flex-col w-full px-[2rem]">
-            <div class="w-full h-[4rem] flex justify-between items-center py-[3rem] px-10">
+            <div class="w-full pr-[1rem] h-[4rem] flex justify-between items-center md:py-[3rem] md:px-10 gap-x-[2rem]">
                 <div class="text-2xl">Dashboard</div>
                 <div class="flex gap-x-[6rem] justify-center items-center">
-                  <div id="status-container" class="rounded-full flex justify-center items-center h-[2rem] p-[1rem] bg-green-400">
-                    <select id="status-select" value="Active" class='bg-transparent text-[#161616]' onChange={handleChange}>
-                      <option value="Active">Active</option>
-                      <option value="Inactive">Inactive</option>
-                    </select>
-                  </div>
-                  <div class="flex gap-x-[1rem] px-[1.2rem] py-[0.3rem] rounded-lg bg-green-400 justify-center items-center">
-                    <div class="bg-gray-800 rounded-full w-12 h-12 flex justify-center items-center">
-                      <img
-                        src="https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833572.jpg?t=st=1713552689~exp=1713556289~hmac=a37004104b096588778454988cd87e069ea75e01ec877d47483af1009677fe96&w=826"
-                        alt="Profile"
-                        class="rounded-full w-full h-full object-cover"
-                      />
+                    <div id="status-container" class="rounded-full flex justify-center items-center h-[2rem] p-[1rem] bg-green-400">
+                        <select id="status-select" class="bg-transparent text-[#161616]">
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
                     </div>
-                    <div class="flex flex-col justify-center text-gray-800">
-                      <p class="text-xl">Bharathwaj</p>
-                      <p class="text-md">Role: Agent</p>
+                    <div class="flex gap-x-[1rem] px-[1.2rem] py-[0.3rem] rounded-lg bg-green-400 justify-center items-center">
+                        <div class="bg-gray-800 rounded-full w-12 h-12 flex justify-center items-center">
+                            <img
+                                src="https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833572.jpg"
+                                alt="Profile"
+                                class="rounded-full w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="flex flex-col justify-center text-gray-800">
+                            <p class="text-xl">Bharathwaj</p>
+                            <p class="text-md">Role: Agent</p>
+                        </div>
+                        <button class="bg-primary-green">
+                            <img src="/assets/logout.svg" alt="Logout" class="h-7 w-7" />
+                        </button>
                     </div>
-                    <button class="bg-green-400">
-                       <img  src="/assets/logout.svg" alt="user-image" class="h-7 w-7 "/>
-                    </button>
-                  </div>
                 </div>
-              </div>
             </div>
+            <div class="flex flex-wrap justify-between">
+                <div class="flex flex-col bg-black bg-opacity-10 p-4 min-w-[240px] rounded-2xl min-h-[140px] shadow-md border-[0.2rem] border-zinc-700">
+                    <div class="flex items-center justify-center gap-x-2">
+                        <span class="relative flex items-center justify-center p-1 bg-green-400 rounded-full">
+                            <img src="/assets/call.svg" alt="Call" class="text-white w-4 h-4" />
+                        </span>
+                        <p class="text-xl">Total Calls</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center mt-2">
+                        <p class="text-5xl font-bold">256</p>
+                        <div class=" w-full h-2 mt-2 bg-gray-300 rounded">
+                            <div class=" w-full h-full bg-green-400 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-black bg-opacity-10 p-4 min-w-[240px] rounded-2xl min-h-[140px] shadow-md border-[0.2rem] border-zinc-700">
+                    <div class="flex items-center justify-center gap-x-2">
+                        <span class="relative flex items-center justify-center p-1 bg-green-400 rounded-full">
+                            <img src="/assets/call.svg" alt="Call" class="text-white w-4 h-4" />
+                        </span>
+                        <p class="text-xl">Calls Today</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center mt-2">
+                        <p class="text-5xl font-bold">37</p>
+                        <div class=" w-full h-2 mt-2 bg-gray-300 rounded">
+                            <div class=" w-full h-full bg-green-400 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-black bg-opacity-10 p-4 min-w-[240px] rounded-2xl min-h-[140px] shadow-md border-[0.2rem] border-zinc-700">
+                    <div class="flex items-center justify-center gap-x-2">
+                        <span class="relative flex items-center justify-center p-1 bg-green-400 rounded-full">
+                            <img src="/assets/call.svg" alt="Call" class="text-white w-4 h-4" />
+                        </span>
+                        <p class="text-xl">Answered</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center mt-2">
+                        <p class="text-5xl font-bold">49</p>
+                        <div class=" w-full h-2 mt-2 bg-gray-300 rounded">
+                            <div class=" w-full h-full bg-green-400 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-black bg-opacity-10 p-4 min-w-[240px] rounded-2xl min-h-[140px] shadow-md border-[0.2rem] border-zinc-700">
+                    <div class="flex items-center justify-center gap-x-2">
+                        <span class="relative flex items-center justify-center p-1 bg-green-400 rounded-full">
+                            <img src="/assets/call.svg" alt="Call" class="text-white w-4 h-4" />
+                        </span>
+                        <p class="text-xl">Not Answered</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center mt-2">
+                        <p class="text-5xl font-bold">72</p>
+                        <div class=" w-full h-2 mt-2 bg-gray-300 rounded">
+                            <div class=" w-full h-full bg-green-400 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col bg-black bg-opacity-10 p-4 min-w-[240px] rounded-2xl min-h-[140px] shadow-md border-[0.2rem] border-zinc-700">
+                    <div class="flex items-center justify-center gap-x-2">
+                        <span class="relative flex items-center justify-center p-1 bg-green-400 rounded-full">
+                            <img src="/assets/call.svg" alt="Call" class="text-white w-4 h-4" />
+                        </span>
+                        <p class="text-xl">Busy</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center mt-2">
+                        <p class="text-5xl font-bold">124</p>
+                        <div class=" w-full h-2 mt-2 bg-gray-300 rounded">
+                            <div class=" w-full h-full bg-green-400 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+            <div class="flex w-full mt-[1.2rem] p-[1rem] gap-x-[1rem]">
+                <div class="w-[70%] rounded-md flex flex-col gap-y-[1rem]">
+                    <div class="bg-light-gray gap-y-[1.8rem] flex flex-col p-[1.3rem] rounded-md h-[8rem]">
+                        <div class="flex item-center justify-between ">
+                            <span class="text-2xl">Call List</span>
+                            <div class="flex gap-x-[1rem] items-center justify-center">
+                            <img src="/assets/filter.svg" alt="filter" class="w-5 h-5"/>
+                            <select class="bg-transparent w-[6rem]">
+                                <option class="text-black">Pending</option>
+                                <option class="text-black">Answered</option>
+                                <option class="text-black">Rejected</option>
+                                <option class="text-black">Dropped</option>
+                            </select>
+                            </div>
+            
+                        </div>
+                        <div class="flex justify-between items-center text-md mr-[0.4rem]">
+                            <span>S.no</span>
+                            <span>Name</span>
+                            <span>Phone Number</span>
+                            <span>Status</span>
+                            <span>Call</span>
+                        </div>
+                    </div>
+                    <div class=" overflow-y-auto h-[25rem]">
+                    <div class="flex flex-col gap-y-[1rem]" id="contacts"></div>
+                </div>
+            </div>
+            <div class="w-[30%] flex flex-col gap-y-[1rem]">
+                 <div class="w-full h-[50%] bg-light-gray flex flex-col">
+                     <div class="p-[1rem]">Calls by Days</div>
+                     <img src="/assets/BarChart.png" class="p-[1rem]" alt="Bar chart"/>
+                 </div>
+                 <div class="w-full h-[50%] bg-light-gray flex flex-col">
+                    <div class="p-[1rem]">Calls by Status</div>
+                    <img src="/assets/Doughnut.png" class="mt-[1rem]" alt="doughnut"/>
+                 </div>
+            </div> 
         </div>
-   </div>
+    </div>
 </body>
 </html>
